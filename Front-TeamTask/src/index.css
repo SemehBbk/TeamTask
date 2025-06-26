@@ -1,0 +1,22 @@
+/* Reset CSS de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Polices + taille globale */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9fafb;
+  color: #1a202c;
+  line-height: 1.6;
+}
+
+/* Pour prendre toute la hauteur de l’écran */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}

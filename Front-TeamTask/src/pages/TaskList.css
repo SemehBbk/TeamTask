@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.tasklist-container {
+  margin-left: 60px;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tasklist-header {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tasklist-filter-container {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(51, 107, 184, 0.1);
+}
+
+.tasklist-filter-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.tasklist-filter-select {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: white;
+  color: #495057;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.tasklist-filter-select:focus {
+  outline: none;
+  border-color: #336BB8;
+  box-shadow: 0 0 0 3px rgba(51, 107, 184, 0.1);
+}
+
+.tasklist-loading {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 2rem 0;
+}
+
+.tasklist-error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tasklist-no-tasks {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 3rem 0;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tasklist-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Popup Styles */
+.tasklist-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.tasklist-popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tasklist-popup-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.tasklist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tasklist-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasklist-form-label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.tasklist-form-sublabel {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.tasklist-input,
+.tasklist-textarea,
+.tasklist-select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.tasklist-input:focus,
+.tasklist-textarea:focus,
+.tasklist-select:focus {
+  outline: none;
+  border-color: #336BB8;
+  box-shadow: 0 0 0 3px rgba(51, 107, 184, 0.1);
+}
+
+.tasklist-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.tasklist-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tasklist-container {
+    margin-left: 220px;
+    padding: 1.5rem;
+  }
+  
+  .tasklist-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tasklist-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .tasklist-header {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  .tasklist-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tasklist-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .tasklist-popup-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .tasklist-button-group {
+    flex-direction: column;
+  }
+}
