@@ -85,3 +85,88 @@ GET /users/user/:id: Récupérer un utilisateur par ID (manager uniquement).
 PUT /users/updateUser/:id:  Mettre à jour le rôle d'un utilisateur(seulement d'un User vers Manager) (manager uniquement).
 GET /users/me: Récupérer les infos de l'utilisateur connecté.
 ```
+
+## Captures d'écrans :
+### Login page
+![Login](./Screenshots/login.png)
+#### Page de connexion pour les utilisateurs et les managers. Les utilisateurs accèdent à leurs tâches personnelles, tandis que les managers accèdent à un tableau de bord de gestion.
+
+
+### Signup page
+![Signup](./Screenshots/signup.png)
+#### Page d'inscription destinée aux utilisateurs. Lorsqu’un utilisateur crée un compte, il obtient automatiquement le rôle "User".
+Les comptes manager sont créés séparément (ex : par un autre manager via la page admin).
+
+
+### My Tasks (vide) - côté utilisateur
+![MyTasks1](./Screenshots/empty_tasks.png)
+#### Vue de la page "Mes tâches" d’un utilisateur sans aucune tâche assignée pour le moment.
+
+### Pages Manager (Administrateur) : 
+
+### Manager Dashboard
+![Dashboard](./Screenshots/manager_dashboard.png)
+#### Tableau de bord du manager affichant des statistiques sur les tâches (à faire, en cours, terminées) ainsi que des statistiques sur les utilisateurs. Permet une navigation rapide vers la gestion des tâches et des utilisateurs.
+
+
+### All Tasks (gestion des tâches)
+![all taks](./Screenshots/all_tasks.png)
+#### Interface permettant au manager de consulter toutes les tâches créées dans l'application. Il peut filtrer les tâches par statut, ou créer une nouvelle tâche.
+
+
+### Filtrage des tâches par statut
+![filtre 1](./Screenshots/filter1.png)
+![filtre 2](./Screenshots/filter2.png)
+#### Exemple de filtre appliqué aux tâches : le manager peut afficher uniquement les tâches "en cours", "à faire" ou "terminées" pour une meilleure gestion.
+
+
+### Popup de création de tâche
+![création de tâche](./Screenshots/create_task.png)
+#### Fenêtre modale contenant un formulaire pour créer une nouvelle tâche et l’assigner à un utilisateur.
+Si aucun utilisateur n’est sélectionné, la tâche sera automatiquement assignée au manager.
+
+
+### Page des utilisateurs (Admin / Manager)
+![users](./Screenshots/users.png)
+#### Liste de tous les utilisateurs de l’application (rôles : User et Manager). Seul un manager peut accéder à cette page pour gérer les comptes.
+
+
+### Modification du rôle d’un utilisateur
+![Modification du rôle](./Screenshots/edit_user.png)
+#### Le manager peut modifier le rôle d’un utilisateur standard et le promouvoir en manager. Les managers ne peuvent pas être rétrogradés.
+
+
+### Rôle modifié avec succès
+![Rôle modifié](./Screenshots/edit_done.png)
+#### Confirmation que le rôle de l’utilisateur a bien été mis à jour avec succès.
+
+
+### Popup de création d’un nouvel utilisateur
+![création d’un user](./Screenshots/create_user.png)
+#### Fenêtre de création d’un utilisateur. Le manager peut choisir de créer un compte de type User ou Manager.
+
+
+### My Tasks - côté manager et utilisateur
+
+### My Tasks - Manager
+![My Tasks](./Screenshots/my_tasks.png)
+#### Le manager peut visualiser, modifier ou supprimer les tâches qu’il s’est attribuées à lui-même.
+
+### My Tasks - Utilisateur
+![My Tasks2](./Screenshots/my_tasks2.png)
+#### L’utilisateur voit maintenant les tâches qui lui ont été assignées. Il peut les consulter, mettre à jour leur statut ou les supprimer.
+
+
+### Popup de modification du statut de la tâche
+![statut Task ](./Screenshots/edit_task_status.png)
+#### L’utilisateur (ou manager) peut modifier le statut de la tâche via cette fenêtre. Les statuts disponibles sont : à faire, en cours, terminé.
+
+
+### Confirmation de suppression de tâche
+![delete](./Screenshots/delete_task.png)
+#### Fenêtre de confirmation avant la suppression d’une tâche. Disponible aussi bien pour les utilisateurs que les managers dans la section "Mes tâches".
+
+
+### Tâche supprimée avec succès
+![delete1](./Screenshots/task_deleted.png)
+#### Tâche supprimée avec succès.
